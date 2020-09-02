@@ -14,9 +14,12 @@
 		<div class="mui-content page_box">
 			<div class="mui-row">
 				<header class="mui-bar mui-bar-nav headerFixed">
-					<div class="mui-col-xs-12 top_logo">
+					<div class="mui-col-xs-6 top_logo">
 						<img src="img/logo01.png" class="logo_img">
 						<img src="img/logo02.png" class="logo_img">
+					</div>
+					<div class="mui-col-xs-6 rule_right">
+						<img src="img/images/rule.png" class="rule_img"/>
 					</div>
 				</header>
 				<img src="img/images/banner01.jpg" class="banner" />
@@ -88,7 +91,16 @@
 						<img src="img/images/banner03.png" class="border_top_img" />
 					</div>
 				</div>
-				<div class="border_bottom"></div>
+				<div class="border_bottom">
+					<form class="submit_form">
+						<input type="tel" placeholder="请输入您的手机号" class="input_group"/>
+						<div class="layout_box">
+							<input type="tel" placeholder="请输入验证码" class="input_group"/>
+							<button class="receiveCode_btn">获取验证码</button>
+						</div>
+						<button class="submit_btn">立即开通</button>
+					</form>
+				</div>
 			</div>
 			<div class="mui-row banner_row">
 				<img src="img/images/float01.png" class="float_img_right"/>
@@ -258,6 +270,15 @@
 					</div>
 				</div>
 			</div>
+			<div class="mui-row bottom_row">
+				<div class="mui-col-xs-6 bottom_left">
+					<p>领VR眼镜</p>
+					<p>享3大会员权益</p>
+				</div>
+				<div class="mui-col-xs-6">
+					<button class="experience_btn">立即体验<span class="role"></span></button>
+				</div>
+			</div>
 		</div>
 	</body>
 	<script>
@@ -274,6 +295,9 @@
 			
 			let borderW = $(".border_top").innerWidth();
 			$(".top_img").css("width",borderW + 1);
+			
+			let btnW = $(".input_group").innerWidth();
+			$(".submit_btn").css("width",btnW);
 			
 			let _obj = $(".vip_img_flex");
 			let _object = $(".hy_img_flex");
