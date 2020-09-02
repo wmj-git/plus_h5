@@ -470,7 +470,7 @@
 .float_img_left.left_01{
 	z-index: 3;
 	top: -35px;
-	width: 165px;
+	width: 252px;
 }
 .float_img_right{
 	position: absolute;
@@ -645,10 +645,16 @@
 		width: 110px;
 	}
 	.float_img_right{
-		right: -30px;
+		right: -35px;
 	}
 	.float_img_left{
 		left: -35px;
+		top: -90px;
+		width: 130px;
+	}
+	.float_img_right.float_right_01{
+		width: 120px;
+    	top: -90px;
 	}
 }
 
@@ -670,7 +676,7 @@
 	.border_row .border_bottom {
 		margin: 27px;
 		left: 2px;
-		top: -213px;
+		top: -80px;
 		height: 300px;
 	}
 	.banner_row {
@@ -742,5 +748,19 @@
 	}
 	.hy_row.vip_row {
 		top: -110px;
+	}
+	.float_img_right.float_right_01{
+		width: 120px;
+    	top: -90px;
+	}
+	.float_img_right{
+		right: -35px;
+		width: 150px;
+		top: -60px;
+	}
+	.float_img_left{
+		left: -35px;
+		top: -90px;
+		width: 130px;
 	}
 }
