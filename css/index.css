@@ -182,12 +182,12 @@
 .border_row {
 	text-align: center;
 	position: relative;
-	top: 3px;
+	top: -6px;
 }
 
 .border_row .border_top {
 	position: relative;
-	z-index: 1;
+	z-index: 2;
 	background-position: center;
 }
 
@@ -252,8 +252,8 @@
 	height: 220px;
 	margin: 10px;
 	position: relative;
-	top: -100px;
-	z-index: 0;
+	top: -40px;
+	z-index: 1;
 	border-radius: 0 0 14px 14px;
 }
 
@@ -273,7 +273,7 @@
 /*长屏幕banner*/
 
 .banner_row {
-	top: -95px;
+	top: -50px;
 	background-color: #211f85;
 }
 
@@ -346,7 +346,7 @@
 /*VR眼镜*/
 
 .eye_row {
-	top: -85px;
+	top: -50px;
 	background-color: #000;
 	padding-bottom: 20px;
 }
@@ -392,14 +392,14 @@
 /*会员特权*/
 
 .hy_row {
-	top: -75px;
+	top: -50px;
 	background-color: #201f87;
 	padding: 20px 5px;
 	text-align: center;
 }
 
 .hy_row.vip_row {
-	top: -65px;
+	top: -50px;
 }
 
 .hy_row .hy_logo {
@@ -458,6 +458,32 @@
 	padding: 10px 0;
 }
 
+
+/*漂浮物*/
+.float_img_left{
+	position: absolute;
+    width: 100px;
+    height: auto;
+    left: -20px;
+    top: -66px;
+}
+.float_img_left.left_01{
+	z-index: 3;
+	top: -35px;
+	width: 165px;
+}
+.float_img_right{
+	position: absolute;
+    width: 90px;
+    height: auto;
+    right: -20px;
+    top: -35px;
+    z-index: 0;
+}
+.float_img_right.float_right_01{
+	width: 80px;
+	top: -60px;
+}
 @media only screen and (max-width: 320px) {
 	.right_title {
 		font-size: 15px;
@@ -530,6 +556,9 @@
 	.left_img {
 		width: 166px;
 	}
+	.float_img_right{
+		width: 120px;
+	}
 	.border_top .top_img {
 		position: absolute;
 		min-height: 330px;
@@ -543,10 +572,10 @@
 	.border_row .border_bottom {
 		height: 366px;
 		margin: 21px;
-		top: -200px;
+		top: -100px;
 	}
 	.banner_row {
-		top: -200px;
+		top: -115px;
 		border-width: 15px;
 		margin: 15px;
 		border-radius: 25px;
@@ -569,7 +598,7 @@
 		width: 80px;
 	}
 	.eye_row {
-		top: -180px;
+		top: -110px;
 		margin: 20px;
 		border-width: 15px;
 	}
@@ -587,7 +616,7 @@
 		height: 28px;
 	}
 	.hy_row {
-		top: -165px;
+		top: -110px;
 		margin: 20px;
 		border-width: 15px;
 		border-radius: 25px;
@@ -607,13 +636,19 @@
 		height: 100px;
 	}
 	.hy_row.vip_row {
-		top: -150px;
+		top: -110px;
 	}
 	.hy_row .hy_title.vip_title {
 		font-size: 28px;
 	}
 	.hy_row .hy_logo.vip_logo {
 		width: 110px;
+	}
+	.float_img_right{
+		right: -30px;
+	}
+	.float_img_left{
+		left: -35px;
 	}
 }
 
@@ -639,7 +674,7 @@
 		height: 300px;
 	}
 	.banner_row {
-		top: -200px;
+		top: -110px;
 		border-width: 15px;
 		margin: 15px;
 		border-radius: 25px;
@@ -662,7 +697,7 @@
 		width: 80px;
 	}
 	.eye_row {
-		top: -180px;
+		top: -110px;
 		margin: 20px;
 		border-width: 20px;
 	}
@@ -680,7 +715,7 @@
 		height: 28px;
 	}
 	.hy_row {
-		top: -165px;
+		top: -110px;
 		margin: 20px;
 		border-width: 15px;
 		border-radius: 25px;
@@ -706,6 +741,6 @@
 		width: 110px;
 	}
 	.hy_row.vip_row {
-		top: -145px;
+		top: -110px;
 	}
 }
