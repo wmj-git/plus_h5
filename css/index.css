@@ -23,10 +23,14 @@
 }
 
 .logo_img {
-	width: 90px;
+	width: 98px;
 	height: 25px;
 	border-right: 1px solid #fff;
-	padding: 0 12px;
+	padding-right: 12px;
+}
+
+.logo_img:last-child {
+	padding-left: 12px;
 }
 
 .logo_img:last-child {
@@ -177,19 +181,26 @@
 
 .border_row {
 	text-align: center;
+	position: relative;
+	top: 3px;
 }
 
 .border_row .border_top {
-	background: url(../img/images/bg_border.png)no-repeat;
-	background-size: cover;
-	padding: 20px;
-	height: auto;
-	width: 100%;
 	position: relative;
-	left: -3px;
-	top: -20px;
 	z-index: 1;
 	background-position: center;
+}
+
+.border_top .top_img {
+	position: absolute;
+	height: auto;
+	left: -4px;
+	top: -20px;
+}
+
+.border_top .float_box {
+	position: relative;
+	top: 10px;
 }
 
 .border_top p {
@@ -268,12 +279,10 @@
 
 .banner_item {
 	margin: 10px 0;
-	padding: 5px 0;
 }
 
 .banner_item:last-child {
 	margin-bottom: 0;
-	height: 195px;
 }
 
 .banner_item .flex_layout {
@@ -296,7 +305,7 @@
 	color: #fff;
 	font-weight: bold;
 	font-size: 30px;
-	margin-bottom: 18px;
+	margin: 25px 0 20px;
 }
 
 .banner_item .add {
@@ -325,8 +334,8 @@
 }
 
 .banner_item .banner_img {
-	width: 335px;
 	height: auto;
+	display: block;
 }
 
 .banner_item .banner_img.last_img {
@@ -343,8 +352,9 @@
 }
 
 .eye_row .eye_img {
-	width: 335px;
+	display: block;
 	height: auto;
+	border-radius: 10px 10px 0 0;
 }
 
 .eye_content .eye_title {
@@ -387,7 +397,8 @@
 	padding: 20px 5px;
 	text-align: center;
 }
-.hy_row.vip_row{
+
+.hy_row.vip_row {
 	top: -65px;
 }
 
@@ -411,9 +422,11 @@
 .hy_row .hy_title.vip_title {
 	font-size: 24px;
 }
-.hy_list{
+
+.hy_list {
 	padding-top: 15px;
 }
+
 .hy_list .hy_item .img_flex {
 	background: linear-gradient(to bottom, #5358c8, #6c7ee2);
 	border-radius: 50%;
@@ -464,12 +477,6 @@
 	.border_row .border_bottom {
 		margin: 9px;
 	}
-	.banner_item .banner_img {
-		width: 280px;
-	}
-	.banner_item:last-child {
-		height: 165px;
-	}
 	.banner_item .bg_circle {
 		width: 100px;
 		height: 100px;
@@ -479,9 +486,6 @@
 	}
 	.banner_item .flex_layout .circle_img.camera_img {
 		width: 70px;
-	}
-	.eye_row .eye_img {
-		width: 280px;
 	}
 	.eye_content .eye_title {
 		font-size: 22px;
@@ -505,12 +509,12 @@
 		width: 20px;
 	}
 	.hy_row .hy_logo.vip_logo {
-    	width: 70px;
+		width: 70px;
 	}
 	.hy_row .hy_title.vip_title {
-    	font-size: 19px;
+		font-size: 19px;
 	}
-	.hy_row .hy_item{
+	.hy_row .hy_item {
 		width: 33%;
 	}
 }
@@ -519,25 +523,19 @@
 /*ipad*/
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
+	.logo_img {
+		width: 120px;
+		height: 30px;
+	}
 	.left_img {
 		width: 166px;
 	}
-	.border_row .border_top {
-		background-position: bottom;
-		left: -6px;
-		top: 0px;
-		position: relative;
-		padding: 50px;
-	}
-	.border_row .border_top::after {
-		content: "";
-		background: #4a4cc3;
-		height: 25px;
+	.border_top .top_img {
 		position: absolute;
-		left: 33px;
-		width: 93%;
-		border-radius: 64px;
-		top: 0;
+		min-height: 330px;
+		left: -6px;
+		top: -20px;
+		height: 100%;
 	}
 	.border_top .border_top_img {
 		width: 490px;
@@ -549,8 +547,9 @@
 	}
 	.banner_row {
 		top: -200px;
-		border-width: 20px;
+		border-width: 15px;
 		margin: 15px;
+		border-radius: 25px;
 	}
 	.banner_item:first-child {
 		padding-top: 30px;
@@ -569,19 +568,12 @@
 	.banner_item .flex_layout .circle_img {
 		width: 80px;
 	}
-	.banner_item .banner_img {
-		width: 697px;
-	}
-	.banner_item:last-child {
-		height: 404px;
-	}
 	.eye_row {
 		top: -180px;
 		margin: 20px;
-		border-width: 20px;
+		border-width: 15px;
 	}
 	.eye_row .eye_img {
-		width: 688px;
 		border-radius: 6px;
 	}
 	.eye_content .eye_icon p {
@@ -597,7 +589,8 @@
 	.hy_row {
 		top: -165px;
 		margin: 20px;
-		border-width: 20px;
+		border-width: 15px;
+		border-radius: 25px;
 	}
 	.hy_list .hy_item .hy_info {
 		font-size: 16px;
@@ -613,14 +606,14 @@
 		width: 100px;
 		height: 100px;
 	}
-	.hy_row.vip_row{
+	.hy_row.vip_row {
 		top: -150px;
 	}
-	.hy_row .hy_title.vip_title{
+	.hy_row .hy_title.vip_title {
 		font-size: 28px;
 	}
 	.hy_row .hy_logo.vip_logo {
-    	width: 110px;
+		width: 110px;
 	}
 }
 
@@ -628,22 +621,16 @@
 /*ipad pro*/
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
-	.border_row .border_top {
-		background-position: bottom;
-		left: -6px;
-		top: 0px;
-		position: relative;
-		padding: 50px;
-	}
-	.border_row .border_top::after {
-		content: "";
-		background: #4a4cc3;
+	.logo_img {
+		width: 120px;
 		height: 30px;
+	}
+	.border_top .top_img {
 		position: absolute;
-		left: 46px;
-		width: 93%;
-		border-radius: 64px;
-		top: 0;
+		min-height: 275px;
+		left: -7px;
+		top: -20px;
+		height: 100%;
 	}
 	.border_row .border_bottom {
 		margin: 27px;
@@ -653,8 +640,9 @@
 	}
 	.banner_row {
 		top: -200px;
-		border-width: 20px;
+		border-width: 15px;
 		margin: 15px;
+		border-radius: 25px;
 	}
 	.banner_item:first-child {
 		padding-top: 30px;
@@ -673,19 +661,12 @@
 	.banner_item .flex_layout .circle_img {
 		width: 80px;
 	}
-	.banner_item .banner_img {
-		width: 953px;
-	}
-	.banner_item:last-child {
-		height: 550px;
-	}
 	.eye_row {
 		top: -180px;
 		margin: 20px;
 		border-width: 20px;
 	}
 	.eye_row .eye_img {
-		width: 944px;
 		border-radius: 6px;
 	}
 	.eye_content .eye_icon p {
@@ -701,7 +682,8 @@
 	.hy_row {
 		top: -165px;
 		margin: 20px;
-		border-width: 20px;
+		border-width: 15px;
+		border-radius: 25px;
 	}
 	.hy_list .hy_item .hy_info {
 		font-size: 16px;
@@ -717,13 +699,13 @@
 		width: 100px;
 		height: 100px;
 	}
-	.hy_row .hy_title.vip_title{
+	.hy_row .hy_title.vip_title {
 		font-size: 28px;
 	}
 	.hy_row .hy_logo.vip_logo {
-    	width: 110px;
+		width: 110px;
 	}
 	.hy_row.vip_row {
-    	top: -145px;
+		top: -145px;
 	}
 }
