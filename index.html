@@ -5,9 +5,11 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="css/mui.min.css" rel="stylesheet" />
-		<link href="css/index.css" rel="stylesheet" />
 		<script src="js/jquery.min.js"></script>
 		<script src="js/mui.min.js"></script>
+		<script src="js/3.1.1/layer.js"></script>
+		<link href="css/index.css" rel="stylesheet" />
+	
 		<title>北京H5</title>
 	</head>
 
@@ -19,8 +21,8 @@
 						<img src="img/logo01.png" class="logo_img">
 						<img src="img/logo02.png" class="logo_img">
 					</div>
-					<div class="mui-col-xs-6 rule_right">
-						<img src="img/images/rule.png" class="rule_img"/>
+					<div class="mui-col-xs-6 rule_right" id="receive_rule">
+						<img src="img/images/rule.png" class="rule_img" />
 					</div>
 				</header>
 				<img src="img/images/banner01.jpg" class="banner" />
@@ -83,9 +85,9 @@
 				</div>
 			</div>
 			<div class="mui-row border_row">
-				<img src="img/images/float03.png" class="float_img_left left_01"/>
+				<img src="img/images/float03.png" class="float_img_left left_01" />
 				<div class="border_top">
-					<img src="img/images/bg_border.png" class="top_img"/>
+					<img src="img/images/bg_border.png" class="top_img" />
 					<div class="float_box">
 						<p class="border_title">北京移动PLUS会员<span>12个月年包</span></p>
 						<P class="border_price"> <span>188</span>元/年 =<span>15.6</span>元/月</P>
@@ -93,18 +95,18 @@
 					</div>
 				</div>
 				<div class="border_bottom">
-					<form class="submit_form" id="receiveCode" >
-						<input type="tel" placeholder="请输入您的手机号" class="input_group"/>
+					<form class="submit_form" id="receiveCode">
+						<input type="tel" placeholder="请输入您的手机号" class="input_group" />
 						<div class="layout_box">
-							<input type="tel" placeholder="请输入验证码" class="input_group"/>
-							<button class="receiveCode_btn" type="button" >获取验证码</button>
+							<input type="tel" placeholder="请输入验证码" class="input_group" />
+							<button class="receiveCode_btn" type="button">获取验证码</button>
 						</div>
 						<button type="button" class="submit_btn">立即开通</button>
 					</form>
 				</div>
 			</div>
 			<div class="mui-row banner_row">
-				<img src="img/images/float01.png" class="float_img_right"/>
+				<img src="img/images/float01.png" class="float_img_right" />
 				<div class="banner_item">
 					<p class="banner_title">巨幕3D 沉浸全景</p>
 					<p class="banner_sub_title">尽在爱奇艺VR</p>
@@ -162,7 +164,7 @@
 				</div>
 			</div>
 			<div class="mui-row hy_row">
-				<img src="img/images/float02.png" class="float_img_left"/>
+				<img src="img/images/float02.png" class="float_img_left" />
 				<img src="img/images/special_logo.png" class="hy_logo" />
 				<p class="hy_title">爱奇艺VR会员特权</p>
 				<div class="hy_list mui-row">
@@ -217,7 +219,7 @@
 				</div>
 			</div>
 			<div class="mui-row hy_row vip_row">
-				<img src="img/images/float04.png" class="float_img_right float_right_01"/>
+				<img src="img/images/float04.png" class="float_img_right float_right_01" />
 				<img src="img/images/vip_icon.png" class="hy_logo vip_logo" />
 				<p class="hy_title vip_title">爱奇艺黄金VIP会员特权</p>
 				<div class="hy_list mui-row">
@@ -276,30 +278,34 @@
 					<p>领VR眼镜</p>
 					<p>享3大会员权益</p>
 				</div>
-				<div class="mui-col-xs-6">
+				<div class="mui-col-xs-6" id="express">
 					<button type="button" class="experience_btn">立即体验<span class="role"></span></button>
 				</div>
 			</div>
 		</div>
+		<p></p>
+		
 	</body>
 	<script>
 		$(function() {
 			suitMrgin();
+			$(".rule_text").html();
+			console.log($(".submit_form").html());
+			$(".dialog_form").html("")
 		});
 
 		function suitMrgin() {
 			let bannerW = $(".banner_item").innerWidth();
-			$(".banner_img").css("width",bannerW);
-			
+			$(".banner_img").css("width", bannerW);
+ 
 			let eyeW = $(".eye_row").innerWidth();
-			$(".eye_img").css("width",eyeW);
-			
+			$(".eye_img").css("width", eyeW);
+
 			let borderW = $(".border_top").innerWidth();
-			$(".top_img").css("width",borderW + 1);
-			
+			$(".top_img").css("width", borderW + 1);
+
 			let btnW = $(".input_group").innerWidth();
-			$(".submit_btn").css("width",btnW);
-			
+			$(".submit_btn").css("width", btnW);
 			let _obj = $(".vip_img_flex");
 			let _object = $(".hy_img_flex");
 			let _allW = $(".vip_row").innerWidth();
@@ -315,16 +321,44 @@
 		$(window).resize(function() {
 			suitMrgin();
 		});
-		function receiveCodeFn(){
+
+		function receiveCodeFn() {
 			console.log('获取验证码');
 		}
-		function submitFn(){
+
+		function submitFn() {
 			console.log('提交表单');
+		}
+
+		function expressFn() {
+			console.log(123);
+			layer.open({
+			  type: 1 //Page层类型
+			  ,area: ['340px', '420px']
+			  ,title: '输入手机号和验证码'
+			  ,shade: 0.6 //遮罩透明度
+			  ,maxmin: false //允许全屏最小化
+			  ,anim: 2
+			  ,content: '<div class="dialog_form"><form><input type ="tel" placehoder="请输入您的手机号" style="width: 200px;"><form></div>'
+			});
+		}
+		function ruleFn(){
+			layer.open({
+			  type: 1 //Page层类型
+			  ,area: ['340px', '420px']
+			  ,title: '订购规则 '
+			  ,shade: 0.6 //遮罩透明度
+			  ,maxmin: false //允许全屏最小化
+			  ,anim: 1 //0-6的动画形式，-1不开启
+			  ,content: '<div class="rule_text" style="padding:50px;"></div>'
+			});
 		}
 	</script>
 	<script>
+		mui("#receive_rule").on("tap",".rule_img",ruleFn);
 		mui("#receiveCode").on("tap", ".receiveCode_btn", receiveCodeFn);
 		mui("#receiveCode").on("tap", ".submit_btn", submitFn);
+		mui("#express").on("tap", ".experience_btn", expressFn);
 	</script>
 
 </html>

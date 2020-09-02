@@ -633,6 +633,10 @@
 	.hy_row .hy_item {
 		width: 33%;
 	}
+	.layui-layer{
+		width: 280px !important;
+		height: 400px !important;
+	}
 }
 
 
@@ -746,6 +750,10 @@
 	.float_img_left.left_01{
 		width: 252px;
 	}
+	.layui-layer{
+		width: 500px !important;
+		height: 700px !important;
+	}
 }
 
 
@@ -856,4 +864,32 @@
 	.float_img_left.left_01{
 		width: 252px;
 	}
+	.layui-layer{
+		width: 800px !important;
+		height: 1000px !important;
+	}
 }
+.layui-layer{
+	border: 8px solid #4e51c4;
+	border-radius: 12px;
+}
+.layui-layer-title{
+	border:none;
+	background-color: transparent;
+	text-align: center;
+	font-size: 20px;
+	padding: 10px 20px 0;
+}
+.layui-layer-setwin{
+	padding: 12px;
+	right: -10px;
+	top: -15px;
+	border-radius: 50%;
+	background: linear-gradient(to bottom,#5145ff,#4da6ff);
+}
+.layui-layer-setwin a{
+	margin-left: 0;
+}
+.layui-layer-setwin .layui-layer-close1 {
+    background-position: 2px -38px;
+ }
