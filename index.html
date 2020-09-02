@@ -7,6 +7,7 @@
 		<link href="css/mui.min.css" rel="stylesheet" />
 		<link href="css/index.css" rel="stylesheet" />
 		<script src="js/jquery.min.js"></script>
+		<script src="js/mui.min.js"></script>
 		<title>北京H5</title>
 	</head>
 
@@ -92,13 +93,13 @@
 					</div>
 				</div>
 				<div class="border_bottom">
-					<form class="submit_form">
+					<form class="submit_form" id="receiveCode" >
 						<input type="tel" placeholder="请输入您的手机号" class="input_group"/>
 						<div class="layout_box">
 							<input type="tel" placeholder="请输入验证码" class="input_group"/>
-							<button class="receiveCode_btn">获取验证码</button>
+							<button class="receiveCode_btn" type="button" >获取验证码</button>
 						</div>
-						<button class="submit_btn">立即开通</button>
+						<button type="button" class="submit_btn">立即开通</button>
 					</form>
 				</div>
 			</div>
@@ -276,7 +277,7 @@
 					<p>享3大会员权益</p>
 				</div>
 				<div class="mui-col-xs-6">
-					<button class="experience_btn">立即体验<span class="role"></span></button>
+					<button type="button" class="experience_btn">立即体验<span class="role"></span></button>
 				</div>
 			</div>
 		</div>
@@ -314,6 +315,16 @@
 		$(window).resize(function() {
 			suitMrgin();
 		});
+		function receiveCodeFn(){
+			console.log('获取验证码');
+		}
+		function submitFn(){
+			console.log('提交表单');
+		}
+	</script>
+	<script>
+		mui("#receiveCode").on("tap", ".receiveCode_btn", receiveCodeFn);
+		mui("#receiveCode").on("tap", ".submit_btn", submitFn);
 	</script>
 
 </html>
