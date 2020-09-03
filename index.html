@@ -9,7 +9,7 @@
 		<script src="js/mui.min.js"></script>
 		<script src="js/3.1.1/layer.js"></script>
 		<link href="css/index.css" rel="stylesheet" />
-	
+
 		<title>北京H5</title>
 	</head>
 
@@ -283,21 +283,18 @@
 				</div>
 			</div>
 		</div>
-		<p></p>
-		
+
 	</body>
 	<script>
 		$(function() {
 			suitMrgin();
 			$(".rule_text").html();
-			console.log($(".submit_form").html());
-			$(".dialog_form").html("")
 		});
 
 		function suitMrgin() {
 			let bannerW = $(".banner_item").innerWidth();
 			$(".banner_img").css("width", bannerW);
- 
+
 			let eyeW = $(".eye_row").innerWidth();
 			$(".eye_img").css("width", eyeW);
 
@@ -331,31 +328,51 @@
 		}
 
 		function expressFn() {
-			console.log(123);
 			layer.open({
-			  type: 1 //Page层类型
-			  ,area: ['340px', '420px']
-			  ,title: '输入手机号和验证码'
-			  ,shade: 0.6 //遮罩透明度
-			  ,maxmin: false //允许全屏最小化
-			  ,anim: 2
-			  ,content: '<div class="dialog_form"><form><input type ="tel" placehoder="请输入您的手机号" style="width: 200px;"><form></div>'
+				type: 1 //Page层类型
+					,
+				area: ['340px', '300px'],
+				title: '输入手机号和验证码',
+				shade: 0.6 //遮罩透明度
+					,
+				maxmin: false //允许全屏最小化
+					,
+				anim: 2,
+				content: '<div class="dialog_form"><form><input type ="tel" placeholder="请输入您的手机号" class="dialog_input">\n' +
+					'<div class="layout_box">\n' +
+					'<input type="tel" placeholder="请输入验证码" class="dialog_input" />\n' +
+					'<button class="receiveCode_btn" type="button">获取验证码</button>\n' +
+					'</div>\n' +
+					'<button type="button" class="submit_btn">立即开通</button><form>\n' +
+					'</div>'
 			});
 		}
-		function ruleFn(){
+
+		function ruleFn() {
 			layer.open({
-			  type: 1 //Page层类型
-			  ,area: ['340px', '420px']
-			  ,title: '订购规则 '
-			  ,shade: 0.6 //遮罩透明度
-			  ,maxmin: false //允许全屏最小化
-			  ,anim: 1 //0-6的动画形式，-1不开启
-			  ,content: '<div class="rule_text" style="padding:50px;"></div>'
+				type: 1 //Page层类型
+					,
+				area: ['340px', '480px'],
+				title: '订购规则 ',
+				shade: 0.6 //遮罩透明度
+					,
+				maxmin: false //允许全屏最小化
+					,
+				anim: 1 //0-6的动画形式，-1不开启
+					,
+				content: '<ul class="rules_text"> \n' +
+					'<li>1. 本活动仅限于正常状态下的北京移动手机客户参加， 部分因业务限制的客户暂不参与办理。 </li> \n' +
+					 '<li> 2. 本业务费用只能用于主账户话费支付， 赠返的话费不可抵扣该业务。 </li>\n' +
+					'<li>3. 客户订购连续包月会员成功后， 优酷会员与优酷定向流量立即生效， 次月起需到优酷活动页面领取数字权益和通信特权， 当月未领取的无法补送。 </li>\n' +
+					'<li>4. 客户订购年包或半年包后， 优酷会员年包或半年包立即生效， 12 个月或6个月优酷app定向流量即日起生效， 每月30G， 月底失效。 </li> \n' +
+					'<li>5. 如当月扣费不成功， 则不可领取会员权益。 </li> \n' +
+					'<li>6. 连续包月产品当月退订， 次月生效并不再连续扣费； 年包、 半年包不可退订。 </li> \n' +
+					'<li>7. 客户领取的通信特权当月有效， 月底失效;领取的语音、 流量、 短信等资源， 不可共享。 </li></ul>'
 			});
 		}
 	</script>
 	<script>
-		mui("#receive_rule").on("tap",".rule_img",ruleFn);
+		mui("#receive_rule").on("tap", ".rule_img", ruleFn);
 		mui("#receiveCode").on("tap", ".receiveCode_btn", receiveCodeFn);
 		mui("#receiveCode").on("tap", ".submit_btn", submitFn);
 		mui("#express").on("tap", ".experience_btn", expressFn);
